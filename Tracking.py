@@ -33,16 +33,12 @@ if choice=="Picture":
 elif choice=="Webcam":
     st.title("Face Recognition App")
     st.write(WEBCAM_PROMPT)
-    cam=cv2.VideoCapture(0)
+    cam=cv2.VideoCapture(1)
     cam.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
     cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
     FRAME_WINDOW=st.image([])
     while True:
         ret,frame=cam.read()
-        if not ret:
-            st.error("Failed to capture frame from camera")
-            st.info("Please turn off the other app that is using the camera and restart app")
-            st.stop()
         image,name,id=recognize(frame,TOLERANCE)
         image=cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
         name_container.info(f"Name:{name}")
