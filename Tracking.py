@@ -1,4 +1,3 @@
-
 import streamlit as st
 import cv2
 import face_recognition as frg
@@ -11,7 +10,6 @@ WEBCAM_PROMPT=cfg['INFO']['WEBCAM_PROMPT']
 st.sidebar.title("Settings")
 menu=["Picture","Webcam"]
 choice=st.sidebar.selectbox("Input type",menu)
-#Put slide to adjust tolerance
 TOLERANCE=st.sidebar.slider("Tolerance",0.0,1.0,0.5,0.01)
 st.sidebar.info("Tolerance is the threshold for face recognition. The lower the tolerance, the more strict the face recognition. The higher the tolerance, the more loose the face recognition.")
 st.sidebar.title("Student Information")
