@@ -20,6 +20,7 @@ def recognize(image,TOLERANCE):
     known_encoding = [database[id]['encoding'] for id in database.keys()] 
     name = 'Unknown'
     id = 'Unknown'
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     face_locations = frg.face_locations(image)
     face_encodings = frg.face_encodings(image,face_locations)
     for (top,right,bottom,left),face_encoding in zip(face_locations,face_encodings):
