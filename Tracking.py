@@ -33,7 +33,8 @@ if choice=="Picture":
 elif choice=="Webcam":
     st.title("Face Recognition App")
     st.write(WEBCAM_PROMPT)
-    cam=cv2.VideoCapture(0)
+    cam=cv2.VideoCapture(1)
+    cam.isOpened() 
     cam.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
     cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
     FRAME_WINDOW=st.image([])
