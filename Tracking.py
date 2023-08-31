@@ -10,7 +10,7 @@ WEBCAM_PROMPT=cfg['INFO']['WEBCAM_PROMPT']
 page_bg_img = '''
 <style>
 body {
-background-image: url(""187161.jpg"");
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZCgq3fxlWFDgNafXiHPPemIts63fhe8oAg&usqp=CAU");
 background-size: cover;
 }
 </style>
