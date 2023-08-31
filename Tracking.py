@@ -40,7 +40,7 @@ elif choice=="Webcam":
     FRAME_WINDOW=st.image([])
     while True:
         ret,frame=cam.read()
-        if ret:
+        if not ret:
             st.error("failed to connect wecom")
             st.info("restart the app")
             st.stop()
