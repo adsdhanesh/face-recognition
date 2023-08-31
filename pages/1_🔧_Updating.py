@@ -7,6 +7,16 @@ import numpy as np
 
 st.set_page_config(layout="wide")
 st.title("Face Recognition App")
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZCgq3fxlWFDgNafXiHPPemIts63fhe8oAg&usqp=CAU");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.write("This app is used to add new faces to the dataset")
 
 menu = ["Adding","Deleting", "Adjusting"]
