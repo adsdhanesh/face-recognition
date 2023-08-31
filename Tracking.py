@@ -40,6 +40,10 @@ elif choice=="Webcam":
     FRAME_WINDOW=st.image([])
     while True:
         ret,frame=cam.read()
+        if ret:
+            st.error("failed to connect wecom")
+            st.info("restart the app")
+            st.stop()
         image,name,id=recognize(frame,TOLERANCE)
         image=cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
         name_container.info(f"Name:{name}")
