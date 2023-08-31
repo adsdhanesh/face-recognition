@@ -7,16 +7,6 @@ st.set_page_config(layout="wide")
 cfg=yaml.load(open('config.yaml','r'),Loader=yaml.FullLoader)
 PICTURE_PROMPT=cfg['INFO']['PICTURE_PROMPT']
 WEBCAM_PROMPT=cfg['INFO']['WEBCAM_PROMPT']
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZCgq3fxlWFDgNafXiHPPemIts63fhe8oAg&usqp=CAU");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
 st.sidebar.title("Settings")
 menu=["Picture","Webcam"]
 choice=st.sidebar.selectbox("Input type",menu)
