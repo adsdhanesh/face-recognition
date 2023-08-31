@@ -12,7 +12,7 @@ menu=["Picture","Webcam"]
 choice=st.sidebar.selectbox("Input type",menu)
 TOLERANCE=st.sidebar.slider("Tolerance",0.0,1.0,0.5,0.01)
 st.sidebar.info("Tolerance is the threshold for face recognition. The lower the tolerance, the more strict the face recognition. The higher the tolerance, the more loose the face recognition.")
-st.sidebar.title("Student Information")
+st.sidebar.title("Person's Information")
 name_container=st.sidebar.empty()
 id_container=st.sidebar.empty()
 name_container.info('Name: Unnknown')
